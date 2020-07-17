@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drumkit</title>
+</head>
+
+<body>
+  <section class="main">
+
+
+    <div data-key="65" class="key">A</div>
+    <div data-key="83" class="key">S</div>
+    <div data-key="68" class="key">D</div>
+    <div data-key="70" class="key">F</div>
+    <div data-key="71" class="key">G</div>
+    <div data-key="72" class="key">H</div>
+    <div data-key="74" class="key">J</div>
+    <div data-key="75" class="key">K</div>
+    <div data-key="76" class="key">L</div>
+  </section>
+
+  <audio data-key="65" src="./Closed-Hi-Hat-1.wav"></audio>
+  <audio data-key="83" src="./Roland-R-8-808-Clap.wav"></audio>
+  <audio data-key="68" src="./E-Mu-Proteus-FX-Wacky-Snare.wav"></audio>
+  <audio data-key="70" src="./Electro-Tom.wav"></audio>
+  <audio data-key="71" src="./E-Mu-Proteus-FX-Wacky-Ride-Cymbal.wav"></audio>
+  <audio data-key="72" src="./Alesis-Fusion-Timpani.wav"></audio>
+  <audio data-key="74" src="./Bottle.wav"></audio>
+  <audio data-key="75" src="./Hi-Bongo.wav"></audio>
+  <audio data-key="76" src="./Korg-N1R-Ride-Bell.wav"></audio>
+
+
+<script>
+  window.addEventListener("keydown", function(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    if (!audio) return;
+    audio.currentTime = 0;
+    audio.play()
+
+    key.classList.add("playing");
+    
+    
+})
+</script>
+
+
+
+
+</body>
+
+</html>
+

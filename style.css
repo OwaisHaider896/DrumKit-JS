@@ -1,0 +1,35 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    min-height: 100vh;
+    align-items: center;
+
+}
+.playing{
+
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 30px #ffc600;
+}
+
+.key {
+    font-size: 30px;
+    transition: all 0.05s;
+    width: 100px;
+    color: aliceblue;
+    border: 1px solid white;
+    text-align: center;
+    padding: 1rem .5rem;
+
+
+}
